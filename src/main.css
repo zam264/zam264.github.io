@@ -1,0 +1,16 @@
+table, td{
+    border: 1px solid black;
+}
+table#navTable{
+    font-family: sans-serif
+}
+img{
+    width: 500px;
+    height: auto;
+}
+h1{
+    font-family: sans-serif
+}
+p{
+    font-family: sans-serif
+}
