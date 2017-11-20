@@ -1,16 +1,39 @@
-table, td{
+ td{
     border: 1px solid black;
-}
+} 
 table#navTable{
-    font-family: sans-serif
+    font-family: sans-serif;
+    font-size: 200%;
+}
+#navLink{
+    text-decoration: none;
+    color: black;
+    padding: 5px;
 }
 img{
     width: 500px;
     height: auto;
 }
 h1{
-    font-family: sans-serif
+    font-family: sans-serif;
 }
 p{
-    font-family: sans-serif
+    font-family: sans-serif;
+}
+html{
+    background: white;
+    background: linear-gradient(to bottom, #6666ff 0%, #ffcccc 100%);
+}
+.button{
+    background-color: transparent;
+    border: 1px solid black;
+    color:black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    outline: none;
 }

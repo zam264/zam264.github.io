@@ -9,6 +9,6 @@ function genNavBar() {
     var numNavBarItems = navBarItems.length;
     document.getElementById("navTable").innerHTML += "<tr id='navBar'></tr>";
     for (var i = 0; i < numNavBarItems; i++) {
-        document.getElementById("navBar").innerHTML += "<td>" + "<a href=" + navBarItems[i][0] + ">" + navBarItems[i][1] + "</a></td>";
+        document.getElementById("navBar").innerHTML += "<td>" + "<a href=" + navBarItems[i][0] + " id='navLink'>" + navBarItems[i][1] + "</a></td>";
     }
 }
