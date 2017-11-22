@@ -4,6 +4,7 @@ function genNavBar() {
         ["about.html", "About"],
         ["resume.html", "Resume"],
         ["fizzbuzz.html", "FizzBuzz"],
+        ["swag.html", "Swag"],
         ["template.html", "Template"]
     ]
     var numNavBarItems = navBarItems.length;
