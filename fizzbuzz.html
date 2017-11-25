@@ -5,13 +5,22 @@
     <script src="src/js/main.js"></script>
     <script src="src/js/fizzbuzz.js"></script>
     <title>FizzBuzz</title>
-    <table id="navTable"></table>
 </head>
 
 <body onload="genNavBar()">
-    <br>
-    <button class="button" onclick="fizzBuzz()">Do FizzBuzz</button>
-    <p id="fizzBuzz"></p>
+    <div>
+        <div class="element left headerText">
+            FizzBuzz
+        </div>
+        <div class="element right" id="header">
+        </div>
+    </div>
+    <hr>
+    <div class="element bodyText">
+        <br>
+        <button class="button" onclick="fizzBuzz()">Do FizzBuzz</button>
+        <p id="fizzBuzz"></p>
+    </div>
 </body>
 
 </html>

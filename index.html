@@ -1,38 +1,45 @@
-<html id="grad">
+<html>
 
 <head>
     <link rel="stylesheet" href="src/css/main.css">
-    <title>
-        Steven Zamborsky
-    </title>
     <script src="src/js/main.js"></script>
 </head>
 
 <body onload="genNavBar()">
-    <table id="navTable"></table>
-    <br>
-    <table>
-        <tr>
-            <td>
-                <p>
-                    Hi there and welcome to my website! I'm actively learning how to write HTML and CSS so you're likely to see alot of updates
-                    to this site as my knowledge grows.
-                    <br>
-                    <br> My Name is Steven Zamborsky. I'm a Computer Science graduate from
-                    <a href="https://www.sru.edu/">Slippery Rock University</a> of Pennsylvania. Since graduation I've worked at
-                    <a href="https://www.creehan.com/">Creehan & Company</a>, a consulting company that was recently acquired by
-                    <a href="http://www.inovalon.com/">Inovalon</a>.
-                    <br>
-                    <br> My job title is "Build and Release Engineer". I primarly create CI/CD pipelines to get code from developer
-                    machines to production in an automated fashion. As of recently, I am starting to explore the world of
-                    DevOps principles and technology.
-                </p>
-            </td>
-            <td>
-                <img src="src/imgs/me.jpg" alt="A photo of me" align="right">
-            </td>
-        </tr>
-    </table>
+    <div>
+        <div class="element left headerText">
+            Steven Zamborsky
+        </div>
+        <div class="element right" id="header">
+        </div>
+    </div>
+    <hr>
+    <div>
+        <div class="element left">
+            <img src="src/imgs/me.jpg" alt="A photo of me">
+        </div>
+        <div class="element bodyText right">
+            Hi there and welcome to my website! I'm actively learning how to write HTML and CSS so you're likely to see alot of updates
+            to this site as my knowledge grows.
+            <br>
+            <br> My Name is Steven Zamborsky. I'm a Computer Science graduate from
+            <a href="https://www.sru.edu/">Slippery Rock University</a> of Pennsylvania. Since graduation I've worked at
+            <a href="https://www.creehan.com/">Creehan & Company</a>, a consulting company that was recently acquired by
+            <a href="http://www.inovalon.com/">Inovalon</a>.
+            <br>
+            <br> My job title is "Build and Release Engineer". I primarly create CI/CD pipelines to get code from developer machines
+            to production in an automated fashion. As of recently, I am starting to explore the world of DevOps principles
+            and technology.
+        </div>
+    </div>
+    <div class="element center">
+        <div class="element">
+            <a href="https://www.linkedin.com/in/steven-zamborsky-1ba65696">LinkedIn</a>
+        </div>
+        <div class="element">
+            <a href="https://github.com/zam264">GitHub</a>
+        </div>
+    </div>
 </body>
 
 </html>
