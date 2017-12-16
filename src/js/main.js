@@ -25,8 +25,8 @@ function genBSNavBar() {
         ["fizzbuzz.html", "FizzBuzz"]
     ]
     var numNavBarItems = navBarItems.length;
-    
-    document.getElementById("navbar").innerHTML += '<nav class="navbar navbar-inverse">'
+    //TODO: construct the innerhtml using variables
+    document.getElementById("navbar").innerHTML += '<nav class="navbar navbar-inverse"><div>'
     document.getElementById("navbar").innerHTML += '<div class="container-fluid">'
     document.getElementById("navbar").innerHTML += '<div class="navbar-header"><a class="navbar-brand" href="indexNEW.html">Steven Zamborsky</a></div>'
     document.getElementById("navbar").innerHTML += '<ul class="nav navbar-nav">'
