@@ -1,6 +1,6 @@
-function fizzBuzz() {
+function fizzBuzz(limit) {
     document.getElementById("fizzBuzz").innerHTML = ""
-    for (var i = 1; i <= 100; i++) {
+    for (var i = 1; i <= limit; i++) {
         if (i % 15 == 0) {
             document.getElementById("fizzBuzz").innerHTML += (i + " FizzBuzz" + "<br>");
         }
