@@ -1,6 +1,9 @@
-html{
-    font-family: sans-serif;
-    background-color: #52628c;
+/*html{
+    font-family: sans-serif !important;
+    background-color: #52628c !important;
+}*/
+body{
+    background-color: #52628c !important;
 }
 
 .element{
