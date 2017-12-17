@@ -20,7 +20,7 @@
     <title>FizzBuzz</title>
 </head>
 
-<body>
+<body onload="initialize()">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -60,8 +60,12 @@
                     "FizzBuzz".
                 </p>
                 <br>
-                <button class="button pageButtons" onclick="fizzBuzz(100)">Do FizzBuzz</button>
-                <p id="fizzBuzz"></p>
+                Enter limit:
+                <br>
+                <input type="text" id="limit" value="100">
+                <button class="button pageButtons" id="fizzBuzzBtn">Do FizzBuzz</button>
+                <!-- <p id="fizzBuzz"></p> -->
+                <div style="overflow-y: scroll; height:220px;" id="fizzBuzz">                    
             </div>
         </div>
     </div>
