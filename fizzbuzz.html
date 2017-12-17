@@ -1,31 +1,69 @@
 <html>
+<!-- TODO: try first unit test here -->
 
 <head>
+    <!-- Imports and initialization -->
+    <meta charset="utf-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Initialize rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Custom imports and declarations -->
     <link rel="stylesheet" href="src/css/main.css">
-    <link rel="icon" href="src/imgs/icon3.png">        
-    <script src="src/js/main.js"></script>
+    <link rel="icon" href="src/imgs/icon3.png">
     <script src="src/js/fizzbuzz.js"></script>
     <title>FizzBuzz</title>
 </head>
 
-<body onload="genNavBar()">
-    <div>
-        <div class="element left headerText">
-            FizzBuzz
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Steven Zamborsky</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About me</a>
+                </li>
+                <li>
+                    <a href="resume.html">Resume</a>
+                </li>
+                <li class="active">
+                    <a href="fizzbuzz.html">Fizzbuzz</a>
+                </li>
+            </ul>
         </div>
-        <div class="element right" id="header">
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 headerText">
+                FizzBuzz
+            </div>
         </div>
-    </div>
-    <hr>
-    <div class="element bodyText">
-        <p>
-            FizzBuzz is one of the most popular interview questions that gets asked.  Naturally, it was one of the first problems I wanted try to program and embed into my site.
-            <br><br>
-            The premise is that you want to loop through numbers 1-100, numbers divisible by 3 you want to print "Fizz".  Numbers divisible by 5 you want to print "Buzz".  Numbers divisible by both 3 and 5 you print "FizzBuzz".
-        </p>
-        <br>
-        <button class="button pageButtons" onclick="fizzBuzz()">Do FizzBuzz</button>
-        <p id="fizzBuzz"></p>
+        <hr>
+        <div class="row">
+            <div class="col-md-6 bodyText">
+                <p>
+                    FizzBuzz is one of the most popular interview questions that gets asked. Naturally, it was one of the first problems I wanted
+                    try to program and embed into my site.
+                    <br>
+                    <br> The premise is that you want to loop through numbers 1-100, numbers divisible by 3 you want to print
+                    "Fizz". Numbers divisible by 5 you want to print "Buzz". Numbers divisible by both 3 and 5 you print
+                    "FizzBuzz".
+                </p>
+                <br>
+                <button class="button pageButtons" onclick="fizzBuzz()">Do FizzBuzz</button>
+                <p id="fizzBuzz"></p>
+            </div>
+        </div>
     </div>
 </body>
 

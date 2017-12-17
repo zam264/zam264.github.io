@@ -1,23 +1,52 @@
 <html>
 
 <head>
+    <!-- Imports and initialization -->
+    <meta charset="utf-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Initialize rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Custom imports and declarations -->
     <link rel="stylesheet" href="src/css/main.css">
-    <link rel="icon" href="src/imgs/icon3.png">        
-    <script src="src/js/main.js"></script>
+    <link rel="icon" href="src/imgs/icon3.png">
     <title>Template</title>
 </head>
 
-<body onload="genNavBar()">
-    <div>
-        <div class="element left headerText">
-            Template
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Steven Zamborsky</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About me</a>
+                </li>
+                <li>
+                    <a href="resume.html">Resume</a>
+                </li>
+                <li>
+                    <a href="fizzbuzz.html">Fizzbuzz</a>
+                </li>
+            </ul>
         </div>
-        <div class="element right" id="header">
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 headerText">
+                Template
+            </div>
         </div>
-    </div>
-    <hr>
-    <div class="element bodyText">
-        Template body text
     </div>
 </body>
 

@@ -1,73 +1,76 @@
 <html>
 
 <head>
-        <meta charset="utf-8">
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html">Steven Zamborsky</a>
-                </div>
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="about.html">About me</a>
-                    </li>
-                    <li>
-                        <a href="resume.html">Resume</a>
-                    </li>
-                    <li>
-                        <a href="fizzbuzz.html">Fizzbuzz</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <!-- Imports and initialization -->
+    <meta charset="utf-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Initialize rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
+    <!-- Custom imports and declarations -->
     <link rel="stylesheet" href="src/css/main.css">
-    <link rel="icon" href="src/imgs/icon3.png">        
-    <script src="src/js/main.js"></script>
+    <link rel="icon" href="src/imgs/icon3.png">
+    <title>Steven Zamborsky</title>
 </head>
 
 <body>
-    <div>
-        <div class="element left headerText">
-            Steven Zamborsky
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">Steven Zamborsky</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About me</a>
+                </li>
+                <li>
+                    <a href="resume.html">Resume</a>
+                </li>
+                <li>
+                    <a href="fizzbuzz.html">Fizzbuzz</a>
+                </li>
+            </ul>
         </div>
-        <div class="element right" id="header">
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 headerText">
+                Steven Zamborsky
+            </div>
         </div>
-    </div>
-    <hr>
-    <div>
-        <div class="element left">
-            <img src="src/imgs/me.jpg" alt="A photo of me">
+        <hr>
+        <div class="row">
+            <div class="col-sm-3">
+                <img src="src/imgs/me.jpg" alt="A photo of me">
+            </div>
+            <div class="col-sm-9 bodyText">
+                Hi there and welcome to my website! I'm actively learning how to write HTML and CSS so you're likely to see alot of updates
+                to this site as my knowledge grows.
+                <br>
+                <br> My Name is Steven Zamborsky. I'm a Computer Science graduate from
+                <a href="https://www.sru.edu/">Slippery Rock University</a> of Pennsylvania. Since graduation I've worked at
+                <a href="https://www.creehan.com/">Creehan & Company</a>, a consulting company that was recently acquired by
+                <a href="http://www.inovalon.com/">Inovalon</a>.
+                <br>
+                <br> My job title is "Build and Release Engineer". I primarily create CI/CD pipelines to get code from developer
+                machines to production in an automated fashion. As of recently, I am starting to explore the world of DevOps
+                principles and technology.
+            </div>
         </div>
-        <div class="element bodyText right">
-            Hi there and welcome to my website! I'm actively learning how to write HTML and CSS so you're likely to see alot of updates to this site as my knowledge grows.
-            <br>
-            <br> My Name is Steven Zamborsky. I'm a Computer Science graduate from
-            <a href="https://www.sru.edu/">Slippery Rock University</a> of Pennsylvania. Since graduation I've worked at
-            <a href="https://www.creehan.com/">Creehan & Company</a>, a consulting company that was recently acquired by
-            <a href="http://www.inovalon.com/">Inovalon</a>.
-            <br>
-            <br> My job title is "Build and Release Engineer". I primarily create CI/CD pipelines to get code from developer machines
-            to production in an automated fashion. As of recently, I am starting to explore the world of DevOps principles
-            and technology.
-        </div>
-    </div>
-    <div class="element center">
-        <div class="element">
-            <a class="contactlinks" href="https://www.linkedin.com/in/steven-zamborsky-1ba65696">LinkedIn</a>
-        </div>
-        <div class="element">
-            <a class="contactlinks" href="https://github.com/zam264">GitHub</a>
+        <div class="row">
+            <div class="col-sm-2 col-sm-offset-5">
+                <a class="contactlinks" href="https://www.linkedin.com/in/steven-zamborsky-1ba65696" target="_blank">LinkedIn</a>
+                <a class="contactlinks" href="https://github.com/zam264" target="_blank">GitHub</a>
+            </div>
         </div>
     </div>
 </body>
