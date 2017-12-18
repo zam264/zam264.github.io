@@ -60,4 +60,8 @@ img{
 
 .contactlinks{
     color: white;
+    font-size: 20;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
 }
