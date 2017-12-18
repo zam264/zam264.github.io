@@ -3,14 +3,23 @@
 //     fizzBuzzBtn.addEventListener("click", test);
 // }
 function initialize() {
-    document.getElementById("fizzBuzzBtn").addEventListener("click", fizzBuzz);
+    document.getElementById("fizzBuzzBtn").addEventListener("click", getLimit);
 }
 
-function fizzBuzz() {
+function getLimit(){
+    var limit = document.getElementById("limit").value;
+    if(!limit){
+        alert("Please enter a limit.");
+    }
+    else{
+        fizzBuzz(limit);
+    }    
+}
+
+function fizzBuzz(limit) {
     if(document.getElementById("fizzBuzz").innerHTML){
         document.getElementById("fizzBuzz").innerHTML = "";
     }
-    var limit = document.getElementById("limit").value;
     for (var i = 1; i <= limit; i++) {
         if (i % 15 == 0) {
             document.getElementById("fizzBuzz").innerHTML += (i + " FizzBuzz" + "<br>");
@@ -25,8 +34,4 @@ function fizzBuzz() {
             document.getElementById("fizzBuzz").innerHTML += (i) + "<br>";
         }
     }
-}
-
-function test() {
-    alert("test")
 }
