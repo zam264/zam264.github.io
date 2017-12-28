@@ -1,35 +1,10 @@
-/*html{
-    font-family: sans-serif !important;
-    background-color: #52628c !important;
-}*/
 body{
     background-color: #52628c !important;
 }
 
-.element{
-    display: inline-block;
-    /* border: 5px solid #c3c6cc;     */
-    box-sizing: border-box;
-}
-
-.left{
-    max-width: 25%;
-}
-
-.right{
-    max-width: 75%;
-    float: right;
-}
-
-.center{
-    width: 100%;
-    text-align: center;
-}
-
-.headerButtons{
-    background-color: white;
-    width: 100px;
-    height: 50px;
+.lr-padded {
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .pageButtons{
