@@ -1,5 +1,5 @@
 #!/bin/bash
 
 cd "$(dirname "$0")"
-git fetch
+sudo git pull 
 sudo cp . /var/www/html/ -rf
