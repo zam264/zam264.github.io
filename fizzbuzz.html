@@ -42,30 +42,30 @@
             </ul>
         </div>
     </nav>
-    <div class="container-fluid lr-padded">
+    <div class="container-fluid dark-container">
         <div class="row">
-            <div class="col-md-6 headerText">
-                FizzBuzz
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-md-12 bodyText">
-                <p>
+            <div class="col-sm-6">
+                <div class="text-container">
                     FizzBuzz is one of the most popular interview questions that gets asked. Naturally, it was one of the first problems I wanted
                     try to program and embed into my site.
                     <br>
                     <br> The premise is that you want to loop through numbers 1-100, numbers divisible by 3 you want to print
                     "Fizz". Numbers divisible by 5 you want to print "Buzz". Numbers divisible by both 3 and 5 you print
                     "FizzBuzz".
-                </p>
-                <br>
-                Enter limit:
-                <br>
-                <input type="text" id="limit" value="10">
-                <button class="button pageButtons" id="fizzBuzzBtn">Do FizzBuzz</button>
-                <!-- <p id="fizzBuzz"></p> -->
-                <div style="overflow-y: scroll; height:220px;" id="fizzBuzz">                    
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="text-container">
+                    Enter limit:
+                    <br>
+                    <input type="text" id="limit" value="10">
+                    <!-- <button class="button pageButtons" id="fizzBuzzBtn">Do FizzBuzz</button> -->
+                    <button type="button" class="btn" id="fizzBuzzBtn">Run FizzBuzz</button>
+                    <br><br>
+                    <div class="output-scroll" id="fizzBuzz">
+                        Output will appear here
+                    </div>
+                </div>
             </div>
         </div>
     </div>
