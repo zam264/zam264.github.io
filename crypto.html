@@ -17,17 +17,18 @@
     <!-- Custom imports and declarations -->
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="icon" href="src/imgs/icon3.png">
-    <title>Template</title>
+    <script src="./src/js/main.js"></script>
+    <title>Cryptocurrency</title>
 </head>
 
-<body>
+<body onload="getCryptoPrices()">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="index.html">Steven Zamborsky</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active">
+                <li>
                     <a href="index.html">Home</a>
                 </li>
                 <li>
@@ -39,7 +40,7 @@
                 <li>
                     <a href="fizzbuzz.html">Fizzbuzz</a>
                 </li>
-                <li>
+                <li class="active">
                     <a href="crypto.html">Cryptocurrency</a>
                 </li>
             </ul>
@@ -47,8 +48,15 @@
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12 headerText">
-                Template
+            <div class="col-md-6 text-container">
+                Recently I've been tracking the crazy phenomenon that is cryptocurrency.  Its extreme volatality and constant headlining developments make it very interesting.  I thought that implementing a very basic "ticker" into my webpage for cryptocurrency would be a good excuse to integrate calls REST API's and JSON into my webpage.  I utilized the CryptoCompare API.
+            </div>
+            <div class="col-md-6 text-container">
+                <div>
+                    <div id="BTC"></div>
+                    <div id="ETH"></div>
+                    <div id="LTC"></div>                
+                </div>
             </div>
         </div>
     </div>
