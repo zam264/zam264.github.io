@@ -12,9 +12,9 @@ function getCryptoPrices() {
             if (xhttp.status == 200) {
                 //  alert(xhttp.responseText);
                 var response = JSON.parse(xhttp.responseText);
-                document.getElementById("BTC").innerHTML = "BTC: " + response.BTC.USD;
-                document.getElementById("ETH").innerHTML = "ETH: " + response.ETH.USD;
-                document.getElementById("LTC").innerHTML = "LTC: " + response.LTC.USD;
+                document.getElementById("BTC").innerHTML = "BTC - $" + response.BTC.USD;
+                document.getElementById("ETH").innerHTML = "ETH - $" + response.ETH.USD;
+                document.getElementById("LTC").innerHTML = "LTC - $" + response.LTC.USD;
             }
             else
                 alert("Error loading page\n");

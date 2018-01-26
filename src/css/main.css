@@ -9,13 +9,7 @@ body{
     height: 50px;
 }
 
-/* img{
-    max-width: 100%;
-    border-radius: 20px;
-} */
-
 .headerText{
-    /* padding: 10px; */
     font-size: 30;
     color: white;
 }
@@ -27,17 +21,8 @@ body{
     font-size: 15;
 }
 
-.contactlinks{
-    color: white;
-    font-size: 20;
-    float: none;
-    margin: 0 auto;
-    text-align: center;
-}
-
 .dark-container{
     background-color: #222;
-    /* padding: 25px 0px; */
     border-radius: 10px;
     padding: 25px 25px;
 }
@@ -49,4 +34,9 @@ body{
     color:white;
     padding: 5px 10px;
     border-radius: 10px;
+}
+
+.crypto-text{
+    font-size: 20px;
+    color: white;
 }
