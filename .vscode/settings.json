@@ -24,5 +24,12 @@
     "cSpell.words": [
         "creehan",
         "zamborsky"
+    ],
+    "spellright.language": "en",
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "html"
     ]
 }
