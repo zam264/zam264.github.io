@@ -21,26 +21,5 @@ function getCryptoPrices() {
         }
     };
     xhttp.send();
+    setTimeout(getCryptoPrices, 5000);
 }
-
-// function genBSNavBar() {
-//     var navBarItems = [
-//         ["index.html", "Home"],
-//         ["about.html", "About"],
-//         ["resume.html", "Resume"],
-//         ["fizzbuzz.html", "FizzBuzz"]
-//     ]
-//     var numNavBarItems = navBarItems.length;
-//     //TODO: construct the innerhtml using variables
-//     document.getElementById("navbar").innerHTML += '<nav class="navbar navbar-inverse"><div>'
-//     document.getElementById("navbar").innerHTML += '<div class="container-fluid">'
-//     document.getElementById("navbar").innerHTML += '<div class="navbar-header"><a class="navbar-brand" href="indexNEW.html">Steven Zamborsky</a></div>'
-//     document.getElementById("navbar").innerHTML += '<ul class="nav navbar-nav">'
-//     for (var i = 0; i < numNavBarItems; i++) {
-//         document.getElementById("navbar").innerHTML += '<li class="active"><a href="'+navBarItems[i][0]+'">'+navBarItems[i][1]+'</a></li>'
-//     }
-//     document.getElementById("navbar").innerHTML += "</ul>"
-//     document.getElementById("navbar").innerHTML += "</div>"
-//     document.getElementById("navbar").innerHTML += "</nav>"
-//     alert(document.getElementById("navbar").innerHTML)
-// }
