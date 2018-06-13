@@ -1,62 +1,40 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//     const cryptoValues = ["BTC",
-//         "ETH",
-//         "LTC",
-//         "XRP",
-//         "BAT",
-//         "TRX"];
-//     const result = getCryptoPrices(cryptoValues);
-//     result
-// });
+// TODO: Polling to automatically refresh values
+// TODO: Allow user to enter CSV string of values to get
 
-async function getCryptoPrices(cryptoSymbols){
-    const url = `https://min-api.cryptocompare.com/data/pricemulti?fsyms=${cryptoSymbols.join()}&tsyms=USD`;
-    const response = await fetch(url)
-    const data = await response.json()
-    console.log(data)
-    // return fetch(url)
-    //     .then(response=> response.json())
-        // .then(data => data.BTC.USD)
+let cryptoValues = ["BTC","ETH","LTC","XRP","BAT","TRX"];
+
+window.onload=function(){
+    document.querySelector("#refresh").addEventListener("click", refreshValues)   
 }
 
-function updateCryptoPrices(cryptoValues){
-    console.log(cryptoValues.BTC.USD)
+let refreshValues = async () => {
+    let prices = await getCryptoPrices(cryptoValues)
+    updateCryptoPrices(prices)
 }
 
-const cryptoSymbols = ["BTC",
-    "ETH",
-    "LTC",
-    "XRP",
-    "BAT",
-    "TRX"];
-const cryptoValues = getCryptoPrices(cryptoSymbols)
-// cryptoValues
-// console.log(cryptoValues)
-// updateCryptoPrices(cryptoValues)
+let getCryptoPrices = async (cryptoSymbols) => {
+    let url = `https://min-api.cryptocompare.com/data/pricemulti?fsyms=${cryptoSymbols.join()}&tsyms=USD`;
+    let prices = await fetch(url)
+    prices = await prices.json()
+    return prices
+}
 
-// function getCryptoPrices(cryptoValues) {
-//     var xhttp = new XMLHttpRequest();
-//     var url = `https://min-api.cryptocompare.com/data/pricemulti?fsyms=${cryptoValues.join()}&tsyms=USD`;
-//     xhttp.open("POST", url, true);
-//     xhttp.setRequestHeader("Content-type", "application/json");
-//     xhttp.onload = function (e) {
-//         if (xhttp.readyState === 4) {
-//             if (xhttp.status === 200) {
-//                 var response = JSON.parse(xhttp.responseText);
-//                 cryptoValues.forEach(updateCryptoPrices.bind(null, response));
-//                 setTimeout(function () {
-//                     getCryptoPrices(cryptoValues);
-//                 }, 5000)
-//             } else {
-//                 console.error(xhttp.statusText);
-//             }
-//         }
-//     };
-//     xhttp.onerror = function (e) {
-//         console.error(xhttp.statusText);
-//     };
-//     xhttp.send();
-// }
+let updateCryptoPrices = async (prices) => {
+    let pricesArray = []
+    Object.keys(prices).forEach( key => {
+        let newPrice = {}
+        newPrice[key] = prices[key]
+        pricesArray.push(newPrice)
+    })
+    prices = pricesArray
+
+    prices.forEach(price => {
+        let symbol = Object.keys(price)[0]
+        let currency = Object.keys(Object.values(price)[0])[0]
+        let value = Object.values(Object.values(price)[0])[0]
+        document.getElementById(symbol).innerHTML = symbol + " - " + currency + " : " + value
+    });
+}
 
 // function updateCryptoPrices(response, item, index) {
 //     var responseValue = response[item].USD;
