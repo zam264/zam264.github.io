@@ -62,16 +62,11 @@
             </div>
             <div class="col-sm-4 col-sm-offset-1 text-container">
                 <h3>Current cryptocurrency values</h3>
-                <div id="cryptoValues" class="dark-container ">
-                    <div id="BTC" class="crypto-text"></div>
-                    <div id="ETH" class="crypto-text"></div>
-                    <div id="LTC" class="crypto-text"></div>
-                    <div id="XRP" class="crypto-text"></div>
-                    <div id="BAT" class="crypto-text"></div>
-                    <div id="TRX" class="crypto-text"></div>
-                </div>
-                <div id="refreshTime"></div>
+                <div id="cryptoValues" class="dark-container"></div>
+                <span>Comma delimited list of Crypto symbols</span>
+                <textarea rows = "1" cols="50" id="symbols">BTC,ETH,LTC,XRP,BAT,TRX</textarea>
                 <input id="refresh" type="button"  value="Refresh"/>
+                <div id="refreshTime"></div>
             </div>
         </div>
     </div>
