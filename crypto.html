@@ -18,6 +18,8 @@
     <!-- Custom imports and declarations -->
     <link rel="stylesheet" href="src/css/main.css">
     <link rel="icon" href="src/imgs/icon3.png">
+    <!-- <script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.js"></script> -->
     <script src="./src/js/main.js"></script>
     <title>Cryptocurrency</title>
 </head>
@@ -60,14 +62,10 @@
             </div>
             <div class="col-sm-4 col-sm-offset-1 text-container">
                 <h3>Current cryptocurrency values</h3>
-                <div id="cryptoValues" class="dark-container ">
-                    <div id="BTC" class="crypto-text"></div>
-                    <div id="ETH" class="crypto-text"></div>
-                    <div id="LTC" class="crypto-text"></div>
-                    <div id="XRP" class="crypto-text"></div>
-                    <div id="BAT" class="crypto-text"></div>
-                    <div id="TRX" class="crypto-text"></div>
-                </div>
+                <div id="cryptoValues" class="dark-container"></div>
+                <span>Comma delimited list of Crypto symbols</span>
+                <textarea rows = "1" cols="50" id="symbols">BTC,ETH,LTC,XRP,BAT,TRX</textarea>
+                <input id="refresh" type="button"  value="Refresh"/>
                 <div id="refreshTime"></div>
             </div>
         </div>
