@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta http-equiv="refresh" content="30" />
+
     <!-- Template page -->
     <!-- Imports and initialization -->
     <meta charset="utf-8">
@@ -13,7 +15,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Initialize rendering -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <!-- ag-Grid -->
+    <script src="https://unpkg.com/ag-grid/dist/ag-grid.min.noStyle.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid/dist/styles/ag-grid.css">
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid/dist/styles/ag-theme-balham.css">
 
     <!-- Custom imports and declarations -->
     <link rel="stylesheet" href="src/css/main.css">
@@ -50,24 +55,22 @@
         </div>
     </nav>
     <div class="container-fluid dark-container">
-        <div class="row">
-            <div class="col-sm-6 text-container">
-                <h3>Cryptocurrency</h3>
-                <hr>
-                Recently, I've been tracking the crazy phenomenon that is <b>cryptocurrency</b>. 
-                Its extreme volatility and constant headlining developments make it very interesting. 
-                I thought that implementing a very basic "ticker" into my webpage for cryptocurrency would be a good excuse to integrate calls REST API's and JSON into my webpage. 
-                I utilized the 
-                <a href="https://www.cryptocompare.com/api/">CryptoCompare API.</a>
-            </div>
-            <div class="col-sm-4 col-sm-offset-1 text-container">
-                <h3>Current cryptocurrency values</h3>
-                <div id="cryptoValues" class="dark-container"></div>
-                <span>Comma delimited list of Crypto symbols</span>
-                <textarea rows = "1" cols="50" id="symbols">BTC,ETH,LTC,XRP,BAT,TRX</textarea>
-                <input id="refresh" type="button"  value="Refresh"/>
-                <div id="refreshTime"></div>
-            </div>
+        <div class="row text-container">
+            <h3>Cryptocurrency</h3>
+            <hr> Recently, I've been tracking the crazy phenomenon that is
+            <b>cryptocurrency</b>. Its extreme volatility and constant headlining developments make it very interesting. I thought
+            that implementing a very basic "ticker" into my webpage for cryptocurrency would be a good excuse to integrate
+            calls REST API's and JSON into my webpage. I utilized the
+            <a href="https://www.cryptocompare.com/api/">CryptoCompare API.</a>
+        </div>
+        <div class="row text-container top-buffer">
+            <h3>Current cryptocurrency values</h3>
+            <!-- <div id="cryptoValues" class="dark-container"></div> -->
+            <div id="myGrid" class="ag-theme-balham grid"></div>
+            <span>Comma delimited list of Crypto symbols</span>
+            <textarea rows="1" cols="50" id="symbols">BTC,ETH,LTC,XRP,BAT,TRX</textarea>
+            <input id="refresh" type="button" value="Refresh" />
+            <div id="refreshTime"></div>
         </div>
     </div>
 </body>

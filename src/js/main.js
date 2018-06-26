@@ -1,8 +1,17 @@
+let myGrid
+
 // TODO: Polling to automatically refresh values
 
 window.onload=function(){
     document.querySelector("#refresh").addEventListener("click", refreshValues)   
     refreshValues()
+    // function doPoll(){
+    //     $.post('test.html', function() {
+    //         // alert(data);  // process results here
+    //         refreshValues()
+    //         setTimeout(doPoll,5000);
+    //     });
+    // }
 }
 
 let refreshValues = async () => {
@@ -53,18 +62,46 @@ let restructureCryptoPrices = async (prices) => {
 }
 
 let updateCryptoPrices = async (prices) => {
-    let cryptoValues = document.getElementById('cryptoValues')
-    cryptoValues.innerHTML = ''
+    // let cryptoValues = document.getElementById('cryptoValues')
+    // cryptoValues.innerHTML = ''
     
-    prices.forEach(price => {
-        let cryptoDiv = document.createElement('div')
-        cryptoDiv.id = price.symbol
-        cryptoDiv.className = 'crypto-text'
-        cryptoDiv.innerHTML = price.symbol + " - " + price.currency + " : " + price.price
-        cryptoValues.appendChild(cryptoDiv)
+    // prices.forEach(price => {
+    //     let cryptoDiv = document.createElement('div')
+    //     cryptoDiv.id = price.symbol
+    //     cryptoDiv.className = 'crypto-text'
+    //     cryptoDiv.innerHTML = price.symbol + " - " + price.currency + " : " + price.price
+    //     cryptoValues.appendChild(cryptoDiv)
+    // })
+
+    // let columnDefs = prices.map(price => {
+    //     let columnDef = Object.keys(price).map( key => {
+    //         return {headerName: key, field: key}
+    //     })
+    //     return columnDef
+    // })
+
+    let columnDefs = Object.keys(prices[0]).map( key => {
+        return {headerName: key.toUpperCase(), field: key, width:105}
     })
 
-    document.getElementById("refreshTime").innerHTML = "Last refresh: " + new Date().toLocaleString();
+    let rowData = prices
+
+    var gridOptions = {
+        columnDefs: columnDefs,
+        rowData: rowData
+      };
+
+    var eGridDiv = document.querySelector('#myGrid')
+
+    if(myGrid){
+        myGrid.destroy()
+        myGrid = new agGrid.Grid(eGridDiv, gridOptions)
+    }
+    else{
+        myGrid = new agGrid.Grid(eGridDiv, gridOptions)
+    }
+
+    document.getElementById("refreshTime").innerHTML = "Last refresh: " + new Date().toLocaleString()
 }
 
 let updateWithError = async (error) => {

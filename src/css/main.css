@@ -40,3 +40,12 @@ body{
     font-size: 20px;
     color: white;
 }
+
+.top-buffer{
+    margin-top:20px;
+}
+
+.grid{
+    height: 220px;
+    /* width: 602px; */
+}
