@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta http-equiv="refresh" content="30" />
+    <!-- <meta http-equiv="refresh" content="30" /> -->
 
     <!-- Template page -->
     <!-- Imports and initialization -->
@@ -68,8 +68,11 @@
             <!-- <div id="cryptoValues" class="dark-container"></div> -->
             <div id="myGrid" class="ag-theme-balham grid"></div>
             <span>Comma delimited list of Crypto symbols</span>
-            <textarea rows="1" cols="50" id="symbols">BTC,ETH,LTC,XRP,BAT,TRX</textarea>
+            <!-- <textarea rows="1" cols="50" id="symbols">BTC,ETH,LTC,XRP,BAT,TRX</textarea> -->
+            <input id="add" type="button" value="Add" />
+            <input id="delete" type="button" value="Delete" disabled/>
             <input id="refresh" type="button" value="Refresh" />
+            <input id="reset" type="button" value="Reset" />
             <div id="refreshTime"></div>
         </div>
     </div>

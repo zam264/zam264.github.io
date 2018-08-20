@@ -1,27 +1,109 @@
 let myGrid
+let gridOptions
 
 // TODO: Polling to automatically refresh values
 
 window.onload=function(){
+    // Bind to the 'Refresh' button
+    document.querySelector("#add").addEventListener("click", addRow) 
+    document.querySelector("#delete").addEventListener("click", deleteRow) 
     document.querySelector("#refresh").addEventListener("click", refreshValues)   
+    document.querySelector("#reset").addEventListener("click", resetRows)   
+    setSymbols("BTC")
     refreshValues()
-    // function doPoll(){
-    //     $.post('test.html', function() {
-    //         // alert(data);  // process results here
-    //         refreshValues()
-    //         setTimeout(doPoll,5000);
-    //     });
-    // }
 }
 
-let refreshValues = async () => {
-    let symbols = document.getElementById('symbols').value
-    symbols = symbols.split(",")
+let getSymbols = () => {
+    if (typeof(Storage) !== "undefined") {
+        return localStorage.getItem("symbols")
+    }
+    else { alert("Sorry, your browser does not support Web Storage...") }    
+}
 
-    let prices = await getCryptoPrices(symbols)
-    // if(prices.Response )
-    prices = await restructureCryptoPrices(prices)
-    updateCryptoPrices(prices)
+let setSymbols = (symbols) => {
+    symbols = symbols.replace(/ /g,'')
+    if (typeof(Storage) !== "undefined") {
+        localStorage.setItem("symbols", symbols)
+    }
+    else { alert("Sorry, your browser does not support Web Storage...") }  
+}
+
+let resetSymbols = () => {
+    // TODO: fix scenarios where the grid has NO data
+    if (typeof(Storage) !== "undefined") {
+        localStorage.clear()
+        setSymbols("BTC")
+    }
+    else { alert("Sorry, your browser does not support Web Storage...") }  
+}
+
+let deleteRow = () => {
+    // Get the currently selected row
+    let selectedRow = gridOptions.api.getSelectedRows();
+    // Make sure we have a row selected to delete, if not don't and disable the "Delete" button
+    if(selectedRow.length > 0){
+        setSymbols(deleteValue(getSymbols(), selectedRow[0].symbol))
+        refreshValues()
+    }
+    else{
+        document.querySelector("#delete").disabled = true
+    }
+}
+
+let addRow = () => {
+    // Get the new symbol from the user
+    let newSymbol = prompt("Enter new symbol.")
+    // Remove any whitespace
+    newSymbol = newSymbol.replace(/ /g,'')
+    newSymbol = newSymbol.toUpperCase()
+    // TODO: add check to see if added symbol is valid
+    setSymbols(addValue(getSymbols(), newSymbol))
+    refreshValues()
+}
+
+let resetRows = () => {
+    resetSymbols()
+    refreshValues()
+}
+
+let deleteValue = (list, value, separator) => {
+    separator = separator || ","
+    var values = list.split(separator)
+    for(var i = 0 ; i < values.length; i++) {
+        if(values[i] == value) {
+            values.splice(i, 1)
+            return values.join(separator)
+        }
+    }
+    return list;
+}
+
+let addValue = (list, value, separator) => {
+    separator = separator || ","
+    var values = list.split(separator)
+    if(values.indexOf(value) == -1) {
+        values.push(value)
+        return values.join(separator)
+    }
+    return list
+}
+
+
+let refreshValues = async () => {
+    // Get the symbols that are currently defined local storage
+    let symbols = getSymbols()
+    if(symbols){
+        // Remove all "spaces" and split on commas
+        symbols = symbols.replace(/ /g,'').split(",")
+        // Get the prices for each symbol in symbols array
+        symbols = await getCryptoPrices(symbols)
+        // Update the crypto price object
+        symbols = await restructureCryptoPrices(symbols)
+    }
+    // Update the crypto prices in the ag-grid
+    updateCryptoPrices(symbols)
+    // Reset the delete button
+    document.querySelector("#delete").disabled = true
 }
 
 let getCryptoPrices = async (cryptoSymbols) => {
@@ -62,34 +144,23 @@ let restructureCryptoPrices = async (prices) => {
 }
 
 let updateCryptoPrices = async (prices) => {
-    // let cryptoValues = document.getElementById('cryptoValues')
-    // cryptoValues.innerHTML = ''
-    
-    // prices.forEach(price => {
-    //     let cryptoDiv = document.createElement('div')
-    //     cryptoDiv.id = price.symbol
-    //     cryptoDiv.className = 'crypto-text'
-    //     cryptoDiv.innerHTML = price.symbol + " - " + price.currency + " : " + price.price
-    //     cryptoValues.appendChild(cryptoDiv)
+    // let columnDefs = Object.keys(prices[0]).map( key => {
+    //     return {headerName: key.toUpperCase(), field: key, width:105}
     // })
-
-    // let columnDefs = prices.map(price => {
-    //     let columnDef = Object.keys(price).map( key => {
-    //         return {headerName: key, field: key}
-    //     })
-    //     return columnDef
-    // })
-
-    let columnDefs = Object.keys(prices[0]).map( key => {
-        return {headerName: key.toUpperCase(), field: key, width:105}
-    })
+    let columnDefs = [
+        {headerName:"SYMBOL", field: "symbol", width: 105},
+        {headerName:"CURRENCY", field: "currency", width: 105},
+        {headerName:"PRICE", field: "price", width: 105},
+    ]
 
     let rowData = prices
 
-    var gridOptions = {
+    gridOptions = {
         columnDefs: columnDefs,
-        rowData: rowData
-      };
+        rowData: rowData,
+        onSelectionChanged: onSelectionChanged,
+        rowSelection: 'single',
+    }
 
     var eGridDiv = document.querySelector('#myGrid')
 
@@ -102,6 +173,10 @@ let updateCryptoPrices = async (prices) => {
     }
 
     document.getElementById("refreshTime").innerHTML = "Last refresh: " + new Date().toLocaleString()
+}
+
+let onSelectionChanged = () => {
+    document.querySelector("#delete").disabled = false
 }
 
 let updateWithError = async (error) => {
