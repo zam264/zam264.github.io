@@ -30,36 +30,36 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="../../index.html">Steven Zamborsky</a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="../../index.html">Home</a>
-                </li>
-                <li>
-                    <a href="about.html">About me</a>
-                </li>
-                <li>
-                    <a href="resume.html">Resume</a>
-                </li>
-                <li>
-                    <a href="fizzbuzz.html">Fizzbuzz</a>
-                </li>
-                <li class="active">
-                    <a href="crypto.html">Cryptocurrency</a>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="about.html">About me</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="fizzbuzz.html">Fizzbuzz</a></li>
+                    <li class="active"><a href="crypto.html">Cryptocurrency</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="container-fluid dark-container">
         <div class="row text-container">
             <h3>Cryptocurrency</h3>
             <hr> Recently, I've been tracking the crazy phenomenon that is
-            <b>cryptocurrency</b>. Its extreme volatility and constant headlining developments make it very interesting. I thought
-            that implementing a very basic "ticker" into my webpage for cryptocurrency would be a good excuse to integrate
+            <b>cryptocurrency</b>. Its extreme volatility and constant headlining developments make it very
+            interesting. I thought
+            that implementing a very basic "ticker" into my webpage for cryptocurrency would be a good excuse to
+            integrate
             calls REST API's and JSON into my webpage. I utilized the
             <a href="https://www.cryptocompare.com/api/">CryptoCompare API.</a>
         </div>
@@ -70,7 +70,7 @@
             <span>Comma delimited list of Crypto symbols</span>
             <!-- <textarea rows="1" cols="50" id="symbols">BTC,ETH,LTC,XRP,BAT,TRX</textarea> -->
             <input id="add" type="button" value="Add" />
-            <input id="delete" type="button" value="Delete" disabled/>
+            <input id="delete" type="button" value="Delete" disabled />
             <input id="refresh" type="button" value="Refresh" />
             <input id="reset" type="button" value="Reset" />
             <div id="refreshTime"></div>

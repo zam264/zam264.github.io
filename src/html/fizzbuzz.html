@@ -22,28 +22,26 @@
 </head>
 
 <body onload="initialize()">
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="../../index.html">Steven Zamborsky</a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="../../index.html">Home</a>
-                </li>
-                <li>
-                    <a href="about.html">About me</a>
-                </li>
-                <li>
-                    <a href="resume.html">Resume</a>
-                </li>
-                <li class="active">
-                    <a href="fizzbuzz.html">Fizzbuzz</a>
-                </li>
-                <li>
-                    <a href="crypto.html">Cryptocurrency</a>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="about.html">About me</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li class="active"><a href="fizzbuzz.html">Fizzbuzz</a></li>
+                    <li><a href="crypto.html">Cryptocurrency</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="container-fluid dark-container">
@@ -51,14 +49,16 @@
             <div class="col-sm-6 text-container">
                 <h3>FizzBuzz</h3>
                 <hr>
-                FizzBuzz is one of the most popular <b>interview questions</b> that gets asked. Naturally, it was one of the first problems I wanted
+                FizzBuzz is one of the most popular <b>interview questions</b> that gets asked. Naturally, it was one
+                of the first problems I wanted
                 try to program and embed into my site.
                 <br>
-                <br> The premise is that you want to loop through numbers 1-100, numbers divisible by 3 you want to print
+                <br> The premise is that you want to loop through numbers 1-100, numbers divisible by 3 you want to
+                print
                 "Fizz". Numbers divisible by 5 you want to print "Buzz". Numbers divisible by both 3 and 5 you print
                 "FizzBuzz".
             </div>
-            <div class="col-sm-4 col-sm-offset-1 text-container">
+            <div class="col-sm-4 col-sm-offset-1 text-container top-buffer">
                 Enter limit:
                 <br>
                 <input type="text" id="limit" value="15">

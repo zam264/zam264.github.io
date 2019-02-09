@@ -21,28 +21,26 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="index.html">Steven Zamborsky</a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
-            <ul class="nav navbar-nav">
-                <li class="active">
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="src/html/about.html">About me</a>
-                </li>
-                <li>
-                    <a href="src/html/resume.html">Resume</a>
-                </li>
-                <li>
-                    <a href="src/html/fizzbuzz.html">Fizzbuzz</a>
-                </li>
-                <li>
-                    <a href="src/html/crypto.html">Cryptocurrency</a>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="src/html/about.html">About me</a></li>
+                    <li><a href="src/html/resume.html">Resume</a></li>
+                    <li><a href="src/html/fizzbuzz.html">Fizzbuzz</a></li>
+                    <li><a href="src/html/crypto.html">Cryptocurrency</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
     <div class="container-fluid dark-container">
@@ -51,32 +49,36 @@
                 <img src="src/imgs/me.jpg" alt="A photo of me" style="max-width: 100%; border-radius: 20px;">
             </div>
             <div class="col-sm-8">
-                <div class="text-container">
-                    Welcome to my website, my Name is <b>Steven Zamborsky</b>. I'm a <b>Computer Science</b> graduate from                   
-                    <a href="https://www.sru.edu/">Slippery Rock University</a> 
-                    of Pennsylvania circa 2015. 
-                    I'm actively learning how to write HTML and CSS so you're likely to see a lot of updates to this site as my knowledge grows.
+                <div class="text-container top-buffer">
+                    Welcome to my website, my Name is <b>Steven Zamborsky</b>. I'm a <b>Computer Science</b> graduate
+                    from
+                    <a href="https://www.sru.edu/">Slippery Rock University</a>
+                    of Pennsylvania circa 2015.
+                    I'm actively learning how to write HTML and CSS so you're likely to see a lot of updates to this
+                    site as my knowledge grows.
                     <br>
-                    <br>                     
-                    My job title is <b>Build and Release Engineer</b>. I primarily create 
-                    <a href="https://www.visualstudio.com/learn/what-is-continuous-integration/">Continuous Integration</a>  
-                    and 
+                    <br>
+                    My job title is <b>Build and Release Engineer</b>. I primarily create
+                    <a href="https://www.visualstudio.com/learn/what-is-continuous-integration/">Continuous Integration</a>
+                    and
                     <a href="https://www.visualstudio.com/learn/what-is-continuous-delivery/">Continuous Delivery</a>
-                    pipelines to get code from developer machines to production in an automated fashion. 
-                    I also contribute to automation efforts throughout various areas of the software development life cycle.
+                    pipelines to get code from developer machines to production in an automated fashion.
+                    I also contribute to automation efforts throughout various areas of the software development life
+                    cycle.
                     As of recently, I am starting to explore the world of DevOps principles and technology.
                     <br>
                     <br>
-                    Since graduation I spent almost 3 years working at 
+                    Since graduation I spent almost 3 years working at
                     <a href="https://www.creehan.com/">Creehan & Company</a>
-                    as a Build and Release Engineer.  
-                    Creehan is a company developing software targeted at the specialty pharmacy industry.  
+                    as a Build and Release Engineer.
+                    Creehan is a company developing software targeted at the specialty pharmacy industry.
                     Creehan was acquired by
                     <a href="http://www.inovalon.com/">Inovalon</a>
                     in 2016, a company providing healthcare analytics services.
                     <br>
-                    <br> 
-                    Early 2018 I resigned from Creehan & Company to pursue a <b>Build and Deployment Engineer</b> position at
+                    <br>
+                    Early 2018 I resigned from Creehan & Company to pursue a <b>Build and Deployment Engineer</b>
+                    position at
                     <a href="https://www.duquesne.com/">Duquesne Fund Services</a>.
                     DFS provides technology solutions for hedge funds, asset managers and family offices.
                 </div>
