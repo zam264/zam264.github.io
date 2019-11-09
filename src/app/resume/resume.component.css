@@ -1,0 +1,52 @@
+
+body{
+    background-color: #52628c !important;
+}
+
+.pageButtons{
+    background-color: #52628c;
+    color: white;
+    width: 100px;
+    height: 50px;
+}
+
+.headerText{
+    font-size: 30;
+    color: white;
+}
+
+.text-container{
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+    font-size: 15;
+}
+
+.dark-container{
+    background-color: #222;
+    border-radius: 10px;
+    padding: 25px 25px;
+}
+
+.output-scroll{
+    overflow-y: scroll;
+    height: 310px;
+    background-color: #222;
+    color:white;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.crypto-text{
+    font-size: 20px;
+    color: white;
+}
+
+.top-buffer{
+    margin-top:20px;
+}
+
+.grid{
+    height: 220px;
+    /* width: 602px; */
+}
