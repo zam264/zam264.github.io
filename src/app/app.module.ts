@@ -12,10 +12,15 @@ import { ResumeComponent } from './resume/resume.component';
 
 
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent},
-  { path: 'aboutme', component: AboutmeComponent},
-  { path: 'resume', component: ResumeComponent}
-
+  { path: 'home', component: HomeComponent },
+  { path: 'aboutme', component: AboutmeComponent },
+  { path: 'resume', component: ResumeComponent },
+  // Reroute initial visit to 'home'
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
 ]
 
 @NgModule({
