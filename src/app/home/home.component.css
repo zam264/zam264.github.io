@@ -1,45 +1,7 @@
-body{
-    background-color: #52628c !important;
-}
-
-
-.headerText{
-    font-size: 30;
-    color: white;
-}
-
-.text-container{
-    padding: 10px;
-    background: white;
-    border-radius: 10px;
-    font-size: 15;
-}
-
-.dark-container{
-    background-color: #222;
-    /* border-radius: 10px; */
-    padding: 25px 25px;
-}
-
-.output-scroll{
-    overflow-y: scroll;
-    height: 310px;
-    background-color: #222;
-    color:white;
-    padding: 5px 10px;
-    border-radius: 10px;
-}
-
-.crypto-text{
-    font-size: 20px;
-    color: white;
-}
-
-.top-buffer{
-    margin-top:20px;
-}
-
-.grid{
-    height: 220px;
-    /* width: 602px; */
-}
+.text-container{padding:10px;border-radius:10px;font-size:15}
+#me{padding:10px}
+#subtitle,#title{width:100%;text-align:center}
+#title{font-size:xx-large}
+#subtitle{font-size:large}
+#linkedin{padding-left: 10px;}
+#github{padding-left: 20px;}
