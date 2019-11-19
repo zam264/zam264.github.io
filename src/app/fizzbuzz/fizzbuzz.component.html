@@ -1,0 +1,17 @@
+<div>
+    <div>
+        <mat-form-field>
+            <input matInput [(ngModel)]="fizzbuzznumber" placeholder="Enter number">
+        </mat-form-field>
+        <button mat-button (click)="fizzbuzz()">Fizzbuzz!</button>
+    </div>
+    <div>
+        <mat-form-field>
+            <textarea matInput placeholder="Fizzbuzz output" value="{{fizzbuzzoutput}}" [disabled]='true' class="output-scroll"></textarea>
+        </mat-form-field>
+    </div>
+</div>
+
+<!-- <button (click)="decrement()">-</button>
+<span>{{counter}}</span>
+<button (click)="increment()">+</button> -->

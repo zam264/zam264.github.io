@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,12 +12,16 @@ import { HomeComponent } from './home/home.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { ResumeComponent } from './resume/resume.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FizzbuzzComponent } from './fizzbuzz/fizzbuzz.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'aboutme', component: AboutmeComponent },
   { path: 'resume', component: ResumeComponent },
+  { path: 'fizzbuzz', component: FizzbuzzComponent },
   // Reroute initial visit to 'home'
   {
     path: '',
@@ -30,7 +36,8 @@ const appRoutes: Routes = [
     HomeComponent,
     AboutmeComponent,
     ResumeComponent,
-    NavbarComponent
+    NavbarComponent,
+    FizzbuzzComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +47,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
-    )
+    ),
+    MatFormFieldModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
