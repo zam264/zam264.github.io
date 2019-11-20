@@ -4,21 +4,10 @@
     <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
         <span class="navbar-toggler-icon"></span>
     </button>
-
-
     <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a mat-button class="nav-link" [routerLink]="[ '/home' ]">Home</a>
-            </li>
-            <li class="nav-item">
-                <a mat-button class="nav-link" [routerLink]="[ '/aboutme' ]">About me</a>
-            </li>
-            <li class="nav-item">
-                <a mat-button class="nav-link" [routerLink]="[ '/resume' ]">Resume</a>
-            </li>
-            <li class="nav-item">
-                <a mat-button class="nav-link" [routerLink]="[ '/fizzbuzz' ]">Fizzbuzz</a>
+            <li class="nav-item" *ngFor="let navbarLink of navbarLinks">
+                <a mat-button class="nav-link" routerLink="{{navbarLink.link}}">{{navbarLink.text}}</a>
             </li>
         </ul>
     </div>
