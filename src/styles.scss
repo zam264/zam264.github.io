@@ -2,5 +2,31 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
 /* body,html{height:100%;} */
-body{margin:0;font-family:Roboto,"Helvetica Neue",sans-serif}
-button.active:focus,button:active:focus,button:focus{outline:0!important;outline-style:none!important}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+button:active:focus,
+button:focus {
+  outline: 0 !important;
+  outline-style: none !important;
+}
+
+#subtitle,
+#title {
+  width: 100%;
+  text-align: center;
+}
+#title {
+  font-size: xx-large;
+}
+#subtitle {
+  font-size: large;
+}
+
+.text-container {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15;
+}

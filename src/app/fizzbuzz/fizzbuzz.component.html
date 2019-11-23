@@ -1,17 +1,32 @@
-<div>
-    <div>
-        <mat-form-field>
-            <input matInput [(ngModel)]="fizzbuzznumber" placeholder="Enter number">
-        </mat-form-field>
-        <button mat-button (click)="fizzbuzz()">Fizzbuzz!</button>
+<body>
+    <div id="title">Fizzbuzz</div>
+    <hr />
+    <div class="grid-container">
+        <div id="description">
+            FizzBuzz is a popular interview questions.
+            <br />
+            The rules are as follows...
+            <ul>
+                <li>
+                    Numbers divisible by 3 you want to print "Fizz"
+                </li>
+                <li>
+                    Numbers divisible by 5 you want to print "Buzz"
+                </li>
+                <li>
+                    Numbers divisible by both 3 and 5 you print "FizzBuzz"
+                </li>
+            </ul>
+        </div>
+        <div class="control-grid-container">
+            <mat-form-field id="fizzbuzz-input">
+                <input matInput [(ngModel)]="fizzbuzznumber" placeholder="Enter number" />
+            </mat-form-field>
+            <button mat-button (click)="fizzbuzz()" id="fizzbuzz-button">Fizzbuzz!</button>
+            <mat-form-field id="fizzbuzz-output">
+                <textarea matInput placeholder="Fizzbuzz output" value="{{ fizzbuzzoutput }}" [disabled]="true"
+                    class="output-scroll"></textarea>
+            </mat-form-field>
+        </div>
     </div>
-    <div>
-        <mat-form-field>
-            <textarea matInput placeholder="Fizzbuzz output" value="{{fizzbuzzoutput}}" [disabled]='true' class="output-scroll"></textarea>
-        </mat-form-field>
-    </div>
-</div>
-
-<!-- <button (click)="decrement()">-</button>
-<span>{{counter}}</span>
-<button (click)="increment()">+</button> -->
+</body>

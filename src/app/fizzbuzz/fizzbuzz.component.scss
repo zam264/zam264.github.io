@@ -1,8 +1,35 @@
-.output-scroll{
-    overflow-y: scroll;
-    height: 310px;
-    // background-color: #222;
-    // color:white;
-    padding: 5px 10px;
-    // border-radius: 10px;
+.output-scroll {
+  overflow-y: scroll;
+  padding: 5px 10px;
+  height: 30vh;
+}
+
+body {
+  padding: 10px;
+}
+.grid-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+button {
+  background-color: #343a40;
+  color: #C3C6C7;
+}
+
+.grid-container > * {
+  border-style: solid;
+  padding: 4px;
+}
+
+.control-grid-container {
+  display: grid;
+  grid-gap: 10px;
+}
+
+#fizzbuzz-input,
+#fizzbuzz-button,
+#fizzbuzz-output {
+  grid-column: 1;
 }
