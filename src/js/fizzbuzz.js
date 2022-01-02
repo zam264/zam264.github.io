@@ -6,18 +6,18 @@ function initialize() {
     document.getElementById("fizzBuzzBtn").addEventListener("click", getLimit);
 }
 
-function getLimit(){
+function getLimit() {
     var limit = document.getElementById("limit").value;
-    if(!limit){
+    if (!limit) {
         alert("Please enter a limit.");
     }
-    else{
+    else {
         fizzBuzz(limit);
-    }    
+    }
 }
 
 function fizzBuzz(limit) {
-    if(document.getElementById("fizzBuzz").innerHTML){
+    if (document.getElementById("fizzBuzz").innerHTML) {
         document.getElementById("fizzBuzz").innerHTML = "";
     }
     for (var i = 1; i <= limit; i++) {
