@@ -49,3 +49,18 @@ body {
     height: 220px;
     /* width: 602px; */
 }
+
+table,
+th,
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+th {
+    text-align: center
+}
+
+table {
+    border-spacing: 30px;
+}
